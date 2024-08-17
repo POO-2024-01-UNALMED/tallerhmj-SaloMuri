@@ -49,6 +49,7 @@ public abstract class Futbolista implements Comparable<Object> {
 		return posicion;
 	}
 	
+	@Override
 	public String toString() {
 		return "El futbolista " + getNombre() + " tiene " + ",y juega de " + getPosicion();
 	}
