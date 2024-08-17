@@ -22,13 +22,7 @@ public abstract class Futbolista implements Comparable<Object> {
 	public abstract boolean jugarConLasManos();
 	
 	public boolean equals(Futbolista f) {
-		boolean portero = false;
-		if (f != null) {
-			if (f == this) {
-			portero = true;
-			}
-		}
-		return portero;
+		return this == f;
 	}
 	
 	public String getNombre() {

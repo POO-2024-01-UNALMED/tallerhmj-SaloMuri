@@ -1,5 +1,7 @@
 package futbol;
 
+import java.lang.Math;
+
 public class Jugador extends Futbolista {
 	
 	public short golesMarcados;
@@ -19,12 +21,8 @@ public class Jugador extends Futbolista {
 	
 	@Override
 	public int compareTo(Object f) {
-		if (f instanceof Jugador) {
-			Jugador otroJugador = (Jugador) f;
-			return Math.abs(this.getEdad() - otroJugador.getEdad());
-		}else {
-			return this.getEdad();
-		}
+		Jugador otroJugador = (Jugador) f;
+		return Math.abs(this.getEdad() - otroJugador.getEdad());
 	}
 	
 	@Override
@@ -34,6 +32,6 @@ public class Jugador extends Futbolista {
 	
 	@Override
 	public String toString() {
-		return "El futbolista " + super.getNombre() + " tiene " + super.getEdad() + ", y juega de " + super.getPosicion() + " con el dorsal " + this.dorsal + ". Ha marcado " + this.golesMarcados;
+		return "El futbolista " + getNombre() + " tiene " + getEdad() + ", y juega de " + getPosicion() + " con el dorsal " + this.dorsal + ". Ha marcado " + this.golesMarcados;
 	}
 }

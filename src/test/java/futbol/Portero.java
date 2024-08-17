@@ -13,12 +13,8 @@ public class Portero extends Futbolista{
 	
 	@Override
 	public int compareTo(Object f) {
-		if (f instanceof Portero) {
-			Portero otroPortero = (Portero) f;
-			return Math.abs(this.golesRecibidos - otroPortero.golesRecibidos);
-		}else {
-			return this.golesRecibidos;
-		}
+		Portero otroPortero = (Portero) f;
+		return Math.abs(this.golesRecibidos - otroPortero.golesRecibidos);
 	}
 	
 	@Override
@@ -28,7 +24,7 @@ public class Portero extends Futbolista{
 	
 	@Override
 	public String toString() {
-		return "El futbolista " + super.getNombre() + " tiene " + super.getEdad() + ", y juega de " + super.getPosicion() + " con el dorsal " + this.dorsal + ". Le han marcado " + this.golesRecibidos;
+		return "El futbolista " + getNombre() + " tiene " + getEdad() + ", y juega de " + getPosicion() + " con el dorsal " + this.dorsal + ". Le han marcado " + this.golesRecibidos;
 	}
 	
 }
