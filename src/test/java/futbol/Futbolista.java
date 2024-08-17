@@ -23,8 +23,10 @@ public abstract class Futbolista implements Comparable<Object> {
 	
 	public boolean equals(Futbolista f) {
 		boolean portero = false;
-		if (f == this) {
+		if (f != null) {
+			if (f == this) {
 			portero = true;
+			}
 		}
 		return portero;
 	}

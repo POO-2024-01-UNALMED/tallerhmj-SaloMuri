@@ -19,8 +19,12 @@ public class Jugador extends Futbolista {
 	
 	@Override
 	public int compareTo(Object f) {
-		Futbolista otroFutbolista = (Futbolista) f;
-		return Integer.compare(this.getEdad(), otroFutbolista.getEdad());
+		if (f instanceof Futbolista) {
+			Futbolista otroFutbolista = (Futbolista) f;
+			return Integer.compare(this.getEdad(), otroFutbolista.getEdad());
+		}else {
+			return this.getEdad();
+		}
 	}
 	
 	@Override
